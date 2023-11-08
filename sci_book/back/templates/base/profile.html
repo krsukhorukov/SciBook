@@ -1,0 +1,16 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Profile</title>
+</head>
+<body>
+    <h1>Профиль пользователя</h1>
+    <p><strong>Имя пользователя:</strong> {{ user.username }}</p>
+    <p><strong>Эл. почта:</strong> {{ user.email }}</p>
+</body>
+
+
+{% endblock %}

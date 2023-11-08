@@ -2,29 +2,19 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
 
+<form action="/registration/" method="POST">
+    {% csrf_token %}
 
-<form action="#">
+    <legend>Sign Up</legend>
 
-    <fieldset>
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" placeholder="Username" required minlength="2">
 
-        <legend>Sign Up</legend>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="Password" required minlength="6">
 
-        <label for="username" class="vhide">Username</label>
-        <input id="username" name="username" type="text" placeholder="Username" required minlength="2">
-
-        <label for="password" class="vhide">Password</label>
-        <input id="password" name="password" type="text" placeholder="Password" required minlength="6">
-
-        <input type="checkbox" name="remember" id="remember" class="vhide">
-        <label for="remember">
-            <i class="octicon octicon-check"></i> Remember all the things
-        </label>
-
-        <button class="signin">Sign in</button>
-
-    </fieldset>
+    <button class="signin">Sign in</button>
 
 </form>
 {% endblock %}
