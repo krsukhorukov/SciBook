@@ -5,6 +5,7 @@ COPY /requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY ./sci_book /app/sci_book
+COPY ./back /app/back
 COPY ./manage.py /app/manage.py
 COPY ./sci_book /app/sci_book
 

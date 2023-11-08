@@ -13,8 +13,9 @@ services:
       - static:/code/static
     depends_on:
       - sci_book_db
+
   sci_book_db:
-    image: postgres:13.2
+    image: postgres:13
     container_name: sci_book_db_c  # исправлено с "сontainer_name" на "container_name"
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
